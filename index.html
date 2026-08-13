@@ -1,78 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
 <!-- ============================================================
-     핸드메이드 웹 템플릿
-     - index.html : 내용(글, 구조)을 담당
-     - style.css  : 생김새(색, 글자, 간격)를 담당
-     내용을 바꾸고 싶으면 이 파일, 모양을 바꾸고 싶으면 style.css.
+     메인 페이지 — 졸전웹의 / 에 해당
+     전체 구조 (실제 졸전웹과 같은 뼈대):
+       index.html            ← 지금 이 파일 (메인)
+       project/index.html    ← 반 구역 입구
+       project/ban-a/        ← 반 페이지 (기조문 + 작품 그리드)
+       project/ban-a/work-01.html ← 작품 상세
+       index/index.html      ← 전체 색인 (이미지 없이 조판만)
+       program/ about/ archive/   ← 나머지 페이지
+     모든 페이지가 style.css 하나를 같이 쓴다.
      ============================================================ -->
 <head>
   <meta charset="UTF-8">
-  <!-- 폰에서도 제대로 보이게 하는 한 줄. 지우지 말 것 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- 브라우저 탭에 뜨는 제목 -->
-  <title>혁의 핸드메이드 페이지</title>
-
-  <!-- style.css를 불러온다. 파일 이름 바꾸면 여기도 같이 바꿀 것 -->
+  <title>2026 졸업전시 — 핸드메이드 목업</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ── 머리: 페이지 맨 위 ─────────────────────────── -->
-  <header>
-    <h1>장혁</h1>
+  <!-- ── 공통 내비게이션 ─────────────────────────────
+       모든 페이지 상단에 이 블록이 반복된다.
+       다른 페이지에서는 경로가 상대적으로 바뀌는 것에 주의
+       (한 단계 안쪽 페이지에선 ../project/index.html 식). -->
+  <nav class="site-nav">
+    <a href="index.html" class="now">2026 졸업전시</a>
+    <a href="project/index.html">Project</a>
+    <a href="index/index.html">Index</a>
+    <a href="program/index.html">Program</a>
+    <a href="about/index.html">About</a>
+    <a href="archive/index.html">Archive</a>
+  </nav>
+
+  <!-- ── 메인: 전시 얼굴 ───────────────────────────── -->
+  <header class="hero">
+    <!-- 메인 타이틀. 크기는 style.css의 .hero h1 에서 조절 -->
+    <h1>필드테스트</h1>
     <p class="intro">
-      손으로 만드는 웹페이지.
-      여기는 자기소개나 페이지 설명을 쓰는 자리.
+      2026 홍익대학교 시각디자인전공 졸업전시 (목업)<br>
+      2026.10.00 — 10.00 · 장소
     </p>
   </header>
 
-  <!-- ── 본문: 섹션을 쌓아가는 곳 ───────────────────────
-       <section> 블록 하나가 한 덩어리.
-       덩어리를 늘리고 싶으면 <section>...</section>을
-       통째로 복사해서 아래에 붙이면 된다. -->
   <main>
-
     <section>
-      <h2>작업</h2>
-      <!-- <ul>은 목록, <li>는 목록의 한 줄.
-           <a href="주소">글자</a> 가 링크. -->
+      <h2>바로가기</h2>
       <ul>
-        <li><a href="https://hyuk.xyz">hyuk.xyz</a> — 아카이브</li>
-        <li><a href="#">작업 이름</a> — 한 줄 설명</li>
-        <li><a href="#">작업 이름</a> — 한 줄 설명</li>
+        <li><a href="project/index.html">Project</a> — 반 구역으로 나뉜 작품 입구</li>
+        <li><a href="index/index.html">Index</a> — 작품·작가 전체 색인 (찾으러 온 사람용)</li>
       </ul>
     </section>
-
-    <section>
-      <h2>글</h2>
-      <p>
-        문단은 &lt;p&gt;로 감싼다.
-        줄을 강제로 바꾸고 싶으면 문장 끝에 &lt;br&gt;를 넣지만,
-        웬만하면 문단(&lt;p&gt;)을 새로 여는 게 낫다.
-      </p>
-      <p>
-        두 번째 문단. 문단 사이 간격은 style.css의
-        「문단」 부분에서 조절한다.
-      </p>
-    </section>
-
-    <section>
-      <h2>이미지 넣는 법</h2>
-      <!-- 이미지: 같은 폴더에 사진 파일을 두고 src에 파일명.
-           alt는 이미지가 안 뜰 때 대신 보이는 설명 글.
-           아래 줄의 주석(<!​-- --​>)을 풀면 바로 쓸 수 있다. -->
-      <!-- <img src="photo.jpg" alt="사진 설명"> -->
-      <p>이미지를 넣으려면 이 섹션의 주석을 참고.</p>
-    </section>
-
   </main>
 
-  <!-- ── 바닥: 페이지 맨 아래 ───────────────────────── -->
   <footer>
-    <p>© 2026 hyuk · <a href="mailto:prota123@gmail.com">mail</a></p>
+    <p>핸드메이드 목업 — 구조는 실제 졸전웹과 동일, 데이터는 자리표시자.</p>
   </footer>
 
 </body>

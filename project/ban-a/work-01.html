@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- ============================================================
+     작품 상세 — 졸전웹의 /project/<반>/<작품ID>/ 에 해당
+     구성: ① 작품 이미지들  ② 작품 설명
+           ③ 작가 정보 레일 (작가 별도 페이지는 없음 — 여기 마지널리아로)
+     작품을 늘리려면 이 파일을 work-02.html 로 복사하고
+     반 페이지(index.html)의 카드 링크를 연결한다.
+     ============================================================ -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작품 이름 — 반 A</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <a href="../../index.html">2026 졸업전시</a>
+    <a href="../index.html" class="now">Project</a>
+    <a href="../../index/index.html">Index</a>
+    <a href="../../program/index.html">Program</a>
+    <a href="../../about/index.html">About</a>
+    <a href="../../archive/index.html">Archive</a>
+  </nav>
+
+  <header>
+    <p class="crumb"><a href="index.html">반 A</a> — 기조문 제목 자리</p>
+    <h1>작품 이름</h1>
+  </header>
+
+  <main>
+
+    <!-- ① 작품 이미지 자리.
+         실제 이미지는 <figure class="plate"> 를
+         <img class="plate" src="..."> 로 교체. 여러 장이면 세로로 쌓는다 -->
+    <section>
+      <figure class="plate">이미지 1</figure>
+      <figure class="plate">이미지 2</figure>
+    </section>
+
+    <!-- ② 작품 설명 -->
+    <section>
+      <h2>작품 설명</h2>
+      <p>
+        작품 설명 자리. 무엇을 만들었고 왜 만들었는지가 들어간다.
+        문단을 늘리려면 &lt;p&gt;를 추가.
+      </p>
+    </section>
+
+    <!-- ③ 작가 정보 — 도록의 여백 메모(마지널리아)처럼 옆에 붙는 정보 -->
+    <aside class="rail">
+      <span>작가 이름</span>
+      <a href="mailto:hello@example.com">mail</a>
+      <a href="#">instagram</a>
+    </aside>
+
+  </main>
+
+  <!-- 이전/다음 작품 이동 -->
+  <footer>
+    <p><a href="index.html">← 반 A</a> · <a href="#">다음 작품 →</a></p>
+  </footer>
+
+</body>
+</html>

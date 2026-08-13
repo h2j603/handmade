@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- ============================================================
+     반 페이지 — 졸전웹의 /project/<반>/ 에 해당
+     구성: ① 형제 반 레일(다른 반으로 건너가는 내비)
+           ② 기조문 헤더  ③ 소속 작품 그리드
+     새 반을 만들 땐 이 ban-a 폴더를 통째로 복사해서
+     폴더 이름과 내용만 바꾸면 된다.
+     ============================================================ -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>반 A — Project</title>
+  <!-- 두 단계 안쪽이라 ../../ -->
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <a href="../../index.html">2026 졸업전시</a>
+    <a href="../index.html" class="now">Project</a>
+    <a href="../../index/index.html">Index</a>
+    <a href="../../program/index.html">Program</a>
+    <a href="../../about/index.html">About</a>
+    <a href="../../archive/index.html">Archive</a>
+  </nav>
+
+  <!-- ① 형제 반 레일: 지금 있는 반은 .now 로 표시 -->
+  <nav class="rail">
+    <a href="index.html" class="now">반 A</a>
+    <a href="#">반 B</a>
+    <a href="#">반 C</a>
+  </nav>
+
+  <!-- ② 기조문 헤더 -->
+  <header>
+    <h1>기조문 제목 자리</h1>
+    <p class="intro">
+      기조문 본문 자리. 반이 무엇을 탐구했는지
+      두세 문장으로 소개하는 글이 들어간다.
+    </p>
+  </header>
+
+  <!-- ③ 작품 그리드
+       카드 하나 = <a class="card"> 하나.
+       .thumb 은 대표 이미지 자리 — 실제 이미지를 쓰려면
+       <div class="thumb"> 를 <img class="thumb" src="..."> 로 교체.
+       그리드 칸수·간격은 style.css 「작품 그리드」에서 조절. -->
+  <main>
+    <section>
+      <h2>작품</h2>
+      <div class="work-grid">
+
+        <a class="card" href="work-01.html">
+          <div class="thumb">01</div>
+          <p class="card-title">작품 이름</p>
+          <p class="card-meta">작가 이름</p>
+        </a>
+
+        <a class="card" href="#">
+          <div class="thumb">02</div>
+          <p class="card-title">작품 이름</p>
+          <p class="card-meta">작가 이름</p>
+        </a>
+
+        <a class="card" href="#">
+          <div class="thumb">03</div>
+          <p class="card-title">작품 이름</p>
+          <p class="card-meta">작가 A · 작가 B (팀)</p>
+        </a>
+
+        <a class="card" href="#">
+          <div class="thumb">04</div>
+          <p class="card-title">작품 이름</p>
+          <p class="card-meta">작가 이름</p>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← 반 목록으로</a></p>
+  </footer>
+
+</body>
+</html>

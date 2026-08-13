@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- ============================================================
+     Index — 전체 색인 (졸전웹의 /index/ 에 해당)
+     Project 와 역할이 다르다:
+       project = 반으로 나뉜 구역의 입구 (훑기)
+       index   = 전체를 한 판에 (찾기) — 일부러 이미지 없이 조판만.
+     팀 작품은 팀원 전원이 행에 들어가 작가 색인을 겸한다.
+     행을 늘리려면 <tr> 블록을 복사.
+     ============================================================ -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Index — 전체 색인</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html">2026 졸업전시</a>
+    <a href="../project/index.html">Project</a>
+    <a href="index.html" class="now">Index</a>
+    <a href="../program/index.html">Program</a>
+    <a href="../about/index.html">About</a>
+    <a href="../archive/index.html">Archive</a>
+  </nav>
+
+  <header>
+    <h1>Index</h1>
+    <p class="intro">작품·작가 전체 색인. 이미지 없이 글자로만.</p>
+  </header>
+
+  <main>
+    <section>
+      <!-- 표: <tr>이 한 행, 안의 <td>가 칸.
+           실제 졸전웹에선 여기에 검색이 붙지만 목업에선 생략. -->
+      <table class="index-table">
+        <thead>
+          <tr><th>작품</th><th>작가</th><th>반</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="../project/ban-a/work-01.html">작품 이름</a></td>
+            <td>작가 이름</td>
+            <td>반 A</td>
+          </tr>
+          <tr>
+            <td><a href="#">작품 이름</a></td>
+            <td>작가 이름</td>
+            <td>반 A</td>
+          </tr>
+          <tr>
+            <td><a href="#">작품 이름 (팀)</a></td>
+            <td>작가 A</td>
+            <td>반 B</td>
+          </tr>
+          <tr>
+            <!-- 팀 작품: 같은 작품이 팀원 수만큼 행으로 반복된다 -->
+            <td><a href="#">작품 이름 (팀)</a></td>
+            <td>작가 B</td>
+            <td>반 B</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← 메인으로</a></p>
+  </footer>
+
+</body>
+</html>

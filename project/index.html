@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- ============================================================
+     Project — 반 구역 입구 (졸전웹의 /project/ 에 해당)
+     실제로는 반 16개. 여기선 3개만 두고 패턴을 보여준다.
+     반을 늘리려면: 목록에 <li> 추가 + ban-a 폴더 복사.
+     ============================================================ -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project — 반 구역</title>
+  <!-- 한 단계 안쪽 폴더라 ../ 로 올라가서 css를 찾는다 -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html">2026 졸업전시</a>
+    <a href="index.html" class="now">Project</a>
+    <a href="../index/index.html">Index</a>
+    <a href="../program/index.html">Program</a>
+    <a href="../about/index.html">About</a>
+    <a href="../archive/index.html">Archive</a>
+  </nav>
+
+  <header>
+    <h1>Project</h1>
+    <p class="intro">
+      작품은 반(班) 단위 구역으로 나뉜다.
+      반 이름을 누르면 기조문과 작품 그리드가 있는 반 페이지로.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>반 목록</h2>
+      <ul>
+        <!-- 반 하나 = <li> 하나. 링크 뒤에 기조문 제목을 붙인다 -->
+        <li><a href="ban-a/index.html">반 A</a> — 기조문 제목 자리</li>
+        <li><a href="#">반 B</a> — 기조문 제목 자리 (아직 안 만듦)</li>
+        <li><a href="#">반 C</a> — 기조문 제목 자리 (아직 안 만듦)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">← 메인으로</a></p>
+  </footer>
+
+</body>
+</html>

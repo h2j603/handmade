@@ -97,6 +97,111 @@ img {
   display: block;
 }
 
+/* ── 공통 내비게이션: 모든 페이지 맨 위 ─────────────────── */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;        /* 폰에서 좁으면 줄바꿈 허용 */
+  gap: 0.25rem 1rem;      /* 세로 0.25, 가로 1rem 간격 */
+  margin-bottom: 3rem;
+  font-size: 0.85rem;
+}
+.site-nav a {
+  text-decoration: none;  /* 내비는 밑줄 없이 */
+}
+/* .now = 지금 보고 있는 페이지 표시. 레일에서도 같이 쓴다 */
+.now {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ── 메인 타이틀 (index.html의 .hero) ───────────────────── */
+.hero h1 {
+  font-size: 3.5rem;      /* 전시 제목 크기. 마음껏 키워볼 것 */
+}
+
+/* ── 레일: 형제 반 내비 / 작품 페이지의 작가 정보 ────────── */
+.rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+}
+
+/* ── 빵부스러기: 작품 상세의 "반 A — 기조문" 줄 ─────────── */
+.crumb {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ── 작품 그리드 (반 페이지) ────────────────────────────── */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 = 한 줄에 카드 2장 */
+  gap: 1.5rem 1rem;
+}
+.card {
+  text-decoration: none;  /* 카드 전체가 링크지만 밑줄은 끔 */
+}
+/* 대표 이미지 자리. 실제 이미지로 바꾸면 이 스타일이 img에 적용됨 */
+.thumb {
+  aspect-ratio: 4 / 3;    /* 대표 이미지 비율 — 전 카드 공통 */
+  background: color-mix(in oklch, var(--accent) 12%, var(--bg));
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  object-fit: cover;      /* img로 교체했을 때 비율 유지 크롭 */
+}
+.card-title {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.card-meta {
+  font-size: 0.85rem;
+  color: color-mix(in oklch, var(--ink) 70%, var(--bg));
+}
+
+/* ── 작품 이미지 자리 (작품 상세의 .plate) ──────────────── */
+.plate {
+  aspect-ratio: 4 / 3;
+  background: color-mix(in oklch, var(--ink) 6%, var(--bg));
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color-mix(in oklch, var(--ink) 50%, var(--bg));
+  margin-bottom: 1rem;
+}
+img.plate {
+  aspect-ratio: auto;     /* 실제 이미지는 원본 비율대로 */
+  width: 100%;
+  height: auto;
+}
+
+/* ── 색인 표 (Index 페이지) ─────────────────────────────── */
+.index-table {
+  width: 100%;
+  border-collapse: collapse; /* 칸 사이 이중선 제거 */
+  font-size: 0.95rem;
+}
+.index-table th {
+  text-align: left;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--ink);
+  padding: 0.4rem 0.5rem 0.4rem 0;
+}
+.index-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
 /* ── 큰 구획 사이 간격 ─────────────────────────────────── */
 header {
   margin-bottom: var(--gap);
