@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="2026 홍익대학교 시각디자인전공 졸업전시">
+    <meta name="generator" content="Astro v7.1.2">
+    <link rel="canonical" href="https://hongiksidi.com/gs/2026/project/m/">
+    <meta name="robots" content="noindex,follow">
+    <meta property="og:url" content="https://hongiksidi.com/gs/2026/project/m/">
+    <meta property="og:title" content="M반 — 접힌 풍경 — 2026 홍익대학교 시각디자인전공 졸업전시">
+    <meta property="og:description" content="2026 홍익대학교 시각디자인전공 졸업전시">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hongiksidi.com/handmade/og/home.png">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="M반 — 접힌 풍경 — 2026 홍익대학교 시각디자인전공 졸업전시">
+    <meta name="twitter:description" content="2026 홍익대학교 시각디자인전공 졸업전시">
+    <meta name="twitter:image" content="https://hongiksidi.com/handmade/og/home.png">
+    <link rel="preload" href="/handmade/_a/PretendardVariable.CJuje-Rk.woff2" as="font" type="font/woff2" crossorigin>
+    <style>@font-face{font-family:'Pretendard Variable';font-weight:45 920;font-style:normal;font-display:swap;src:url('/handmade/_a/PretendardVariable.CJuje-Rk.woff2') format('woff2-variations')}</style>
+    <title>M반 — 접힌 풍경 — 2026 홍익대학교 시각디자인전공 졸업전시</title>
+  <link rel="stylesheet" href="/handmade/_a/Base.DH0t1mB7.css"></head>
+  <body>
+    <header class="site">
+      <p class="brand"><a href="/handmade/">2026 홍익대학교 시각디자인전공 졸업전시</a></p>
+    </header>
+    <main>
+        
+  <header class="statement">
+    
+        <h1>접힌 풍경</h1>
+        <p class="en" lang="en">Folded Landscape — Class M</p>
+        <p class="body">M반의 작업은 접힌 풍경을 축으로 한다. 관찰의 폭과 해석의 거리를 작품마다 다르게 잡아, 같은 시간 안에서도 다른 결의 이미지가 쌓이도록 훈련해 왔다.</p>
+      
+  </header>
+
+  <ul class="works" data-shuffle style="--thumb-ratio: 1.5">
+  <li>
+        <a href="/handmade/project/m/vp2i96/">
+          <span class="ph">
+            
+<img src="/handmade/_a/thumb.BVjAS3OD_Z2qcNwR.avif" srcset="/handmade/_a/thumb.BVjAS3OD_2g1l8e.avif 320w, /handmade/_a/thumb.BVjAS3OD_ZopaUN.avif 640w, /handmade/_a/thumb.BVjAS3OD_1x672R.avif 1200w, /handmade/_a/thumb.BVjAS3OD_Z2qcNwR.avif 1600w" alt="남은 가지 — 작품 이미지" sizes="(max-width: 48rem) 100vw, (max-width: 80rem) 45vw, 540px" loading="lazy" decoding="async" width="1600" height="1067">
+          </span>
+          <p class="t">남은 가지</p>
+          <p class="m">송하빈 · M반</p>
+        </a>
+      </li><li>
+        <a href="/handmade/project/m/rj5bcm/">
+          <span class="ph">
+            
+<img src="/handmade/_a/thumb.DSHdOlZ8_ZttWYA.avif" srcset="/handmade/_a/thumb.DSHdOlZ8_lLfrm.avif 320w, /handmade/_a/thumb.DSHdOlZ8_Z2iEgBF.avif 640w, /handmade/_a/thumb.DSHdOlZ8_Z1AnbdM.avif 1200w, /handmade/_a/thumb.DSHdOlZ8_ZttWYA.avif 1600w" alt="먼 곳의 거리 — 작품 이미지" sizes="(max-width: 48rem) 100vw, (max-width: 80rem) 45vw, 540px" loading="lazy" decoding="async" width="1600" height="1067">
+          </span>
+          <p class="t">먼 곳의 거리</p>
+          <p class="m">고지원 · M반</p>
+        </a>
+      </li>
+</ul>
+
+<script>
+    // 노출 순서가 곧 이득이므로 **방문마다** 섞는다.
+    // 정적 사이트라 빌드 시점에 섞어봐야 그 순서가 전시 내내 고정된다 — 특정 학생이 영구히 맨 위.
+    //
+    // is:inline + 목록 바로 뒤 = 파싱 도중 동기 실행이라 첫 페인트 전에 순서가 정해진다.
+    // 칸 비율이 고정(aspect-ratio)이라 기하는 그대로고, order 만 바뀌므로 레이아웃이 튀지 않는다.
+    // JS 가 없으면 빌드 순서(반별 결정적 셔플)가 그대로 남는다 — 깨지지 않는다.
+    (function () {
+      var list = document.currentScript.previousElementSibling;
+      if (!list || !list.matches('ul.works[data-shuffle]')) return;
+      var items = list.children;
+      var order = [];
+      for (var i = 0; i < items.length; i++) order.push(i);
+      for (var i = order.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = order[i]; order[i] = order[j]; order[j] = t;
+      }
+      for (var i = 0; i < items.length; i++) items[i].style.order = order[i];
+    })();
+  </script>
+
+  <nav class="siblings" aria-label="다른 반">
+    <a href="/handmade/project/a/">A반</a><a href="/handmade/project/b/">B반</a><a href="/handmade/project/c/">C반</a><a href="/handmade/project/d/">D반</a><a href="/handmade/project/e/">E반</a><a href="/handmade/project/f/">F반</a><a href="/handmade/project/g/">G반</a><a href="/handmade/project/h/">H반</a><a href="/handmade/project/i/">I반</a><a href="/handmade/project/j/">J반</a><a href="/handmade/project/k/">K반</a><a href="/handmade/project/l/">L반</a><a href="/handmade/project/m/" aria-current="page">M반</a><a href="/handmade/project/n/">N반</a><a href="/handmade/project/o/">O반</a><a href="/handmade/project/p/">P반</a>
+  </nav>
+
+      </main>
+    
+    <nav class="menu" aria-label="주 메뉴">
+      <a href="/handmade/about/">About</a><a href="/handmade/program/">Program</a><a href="/handmade/project/" aria-current="page">Project</a><a href="/handmade/index/">Index</a><a href="/handmade/archive/">Archive</a>
+    </nav>
+
+    <footer class="site">
+      <p>2026 졸업전시 (뼈대 — 더미 데이터)</p>
+      <p>홍익대학교 미술대학 시각디자인전공</p>
+    </footer>
+  </body>
+</html>

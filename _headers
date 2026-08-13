@@ -1,0 +1,10 @@
+# Cloudflare Pages 헤더 규칙 (CF만 읽는다 — GitHub Pages·Cafe24는 무시).
+#
+# 하이브리드 서빙에서 Cafe24(hongiksidi.com)의 HTML이 CF의 폰트를 불러온다.
+# 폰트는 CORS 대상이라 Access-Control-Allow-Origin 이 없으면 교차 오리진에서
+# 차단된다 — 이미지는 되는데 글꼴만 안 먹는 형태로 나타난다.
+#
+# _a/ 는 내용 해시가 파일명에 박히므로(build.assets) 영구 캐시가 안전하다.
+/_a/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable

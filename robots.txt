@@ -1,0 +1,4 @@
+# 미러(failover·자산 서빙용) — 공식 주소만 색인되게 한다.
+# 공식: https://hongiksidi.com/gs/2026/
+User-agent: *
+Disallow: /
